@@ -145,15 +145,49 @@ print(mensaje)
 # Ejercicio 1: Determinar el mayor de dos números
 # Pide al usuario que introduzca dos números y muestra un mensaje
 # indicando cuál es mayor o si son iguales
+print('----Determinemos el numero mayor-----\n')
 
+number_one = int(input('Introduce el primer numero por favor:\n'))
+number_two = int(input('Introduce el segundo numero por favor:\n'))
+if number_one == number_two:
+  print(f'{number_one} y {number_two} son iguales')
+elif number_one > number_two:
+  print(f'{number_one} es mayor que {number_two}')
+else : 
+  print(f'{number_two} es mayor que {number_one}')
+
+print('\n-------------------------------------\n')
 # Ejercicio 2: Calculadora simple
 # Pide al usuario dos números y una operación (+, -, *, /)
 # Realiza la operación y muestra el resultado (maneja la división entre zero)
+print('\ncalculadora de operaciones simples\n')
+z = input('por favor introduce un operador entre los sieguientes ( "+" , "-" , "*" , "/" )\n')
+x = int(input('Introduce el primer numero por favor:\n'))
+y = int(input('Introduce el segundo numero por favor:\n'))
 
+
+if (y != 0) and (z == '/'):
+  print(f'la division de {x} / {y} es = {x/y}')
+elif z == '*':
+  print(f'la multiplicacion de {x} * {y} es = {x*y}')
+elif z == '+':
+  print(f'la suma de {x} + {y} es = {x+y}')
+elif z == '-':
+  print(f'la resta de {x} - {y} es = {x-y}')
+else: print('valores incorrectos la operacion no puede ser ejecutada')
+
+print('\n-------------------------------------\n')
 # Ejercicio 3: Año bisiesto
 # Pide al usuario que introduzca un año y determina si es bisiesto.
 # Un año es bisiesto si es divisible por 4, excepto si es divisible por 100 pero no por 400.
+print('\n------Determina si el año es bisiesto------\n')
+evaluated_year = int(input('introduzca un año por favor:'))
 
+if (evaluated_year % 400 == 0) or ((evaluated_year % 4 == 0) and (evaluated_year % 100 != 0)):
+  print ('es un año bisiesto')   
+else: print ('no es un año bisiesto')
+
+print('\n-------------------------------------\n')
 # Ejercicio 4: Categorizar edades
 # Pide al usuario que introduzca una edad y la clasifique en:
 # - Bebé (0-2 años)
@@ -161,3 +195,15 @@ print(mensaje)
 # - Adolescente (13-17 años)
 # - Adulto (18-64 años)
 # - Adulto mayor (65 años o más)
+print('\n------Clasificacion de edades------\n')
+age = int(input('introduce una edad por favor:'))
+if (age >= 65):
+  print ('Clasificado como : Adulto mayor')
+elif age >= 18 :
+  print ('Clasificado como : Adulto')
+elif age >= 13 :
+  print ('Clasificado como : Adolescente')
+elif age >= 3: 
+  print ('Clasificado como : Niño')
+else: print ('Clasificado como : Bebe')
+  
